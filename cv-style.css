@@ -1,0 +1,406 @@
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #001005;
+    --text-color: white;
+    --main-color: #00ff51;
+    --heading-color: #ffffff;
+    --paragraph-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 81, 0.1);
+    position: relative;
+}
+
+.print-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 900px;
+}
+
+.print-btn, .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.print-btn:hover, .back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 255, 81, 0.2);
+}
+
+.back-btn {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.pdf-btn {
+    background-color: #e74c3c;
+}
+
+.pdf-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(192, 57, 43, 0.3);
+}
+
+header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--paragraph-color);
+}
+
+.contact-item svg {
+    color: var(--main-color);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.about {
+    margin-bottom: 2rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    color: var(--paragraph-color);
+}
+
+.two-column {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.column {
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 6.5rem;
+    top: 0;
+    bottom: -1.5rem;
+    width: 2px;
+    background-color: rgba(0, 255, 81, 0.2);
+    z-index: 1;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.date {
+    width: 6rem;
+    min-width: 6rem;
+    color: var(--main-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.date::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    z-index: 2;
+}
+
+.content {
+    flex: 1;
+}
+
+.content h4 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.content p {
+    color: var(--paragraph-color);
+    font-size: 0.95rem;
+}
+
+.skill-group {
+    margin-bottom: 1.5rem;
+}
+
+.skill-group h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.skill-item {
+    margin-bottom: 0.8rem;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.skill-bar {
+    height: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+}
+
+.project-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--main-color);
+}
+
+.project-item h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.project-item p {
+    color: var(--paragraph-color);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+.tags, .interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Yazdırma Optimizasyonları */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .container {
+        margin: 0;
+        padding: 15mm;
+        background-color: white;
+        box-shadow: none;
+        border-radius: 0;
+        width: 210mm;
+        height: 297mm; /* A4 boyutu */
+        page-break-after: always;
+    }
+    
+    .print-controls {
+        display: none;
+    }
+    
+    :root {
+        --text-color: #333;
+        --paragraph-color: #555;
+        --heading-color: #222;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #222;
+    }
+    
+    .tag {
+        border: 1px solid var(--main-color);
+    }
+    
+    .section-title {
+        color: #222;
+    }
+    
+    .skill-bar, .project-item {
+        border: 1px solid #eee;
+    }
+    
+    .timeline-item::before {
+        background-color: #eee;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .two-column {
+        flex-direction: column;
+    }
+    
+    .print-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .timeline-item::before {
+        display: none;
+    }
+    
+    .date {
+        width: 100%;
+    }
+    
+    .date::after {
+        display: none;
+    }
+} 
